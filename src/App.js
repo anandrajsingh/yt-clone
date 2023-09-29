@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import {Navbar, Feed} from "./components";
-
+import {Navbar, Feed, ChannelDetail} from "./components";
 
 function App() {
   return (
@@ -10,6 +9,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route exact path="/" element={<Feed/>}/>
+          <Route path="/channel/:id" element={<ChannelDetail/>}/>
         </Routes>
       </Box>
     </BrowserRouter>
